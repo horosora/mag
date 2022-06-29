@@ -13,6 +13,6 @@ class Command(gdb.Command):
     def invoke(self, argument, from_tty):
         return
 
-for module_name in sys.modules.keys():
+for module_name, module in sys.modules.items():
     if module_name.startswith('mag.command'):
-        inspect.getmembers(sys.modules[module_name], inspect.isclass)[0][1]()
+        getattr(module, 'Command')()

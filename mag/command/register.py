@@ -6,7 +6,7 @@ from mag import register
 from mag import memory
 from mag import terminal
 
-class Register(gdb.Command):
+class Command(gdb.Command):
     def __init__(self):
         super().__init__('mag register', gdb.COMMAND_NONE, gdb.COMPLETE_NONE, False)
 

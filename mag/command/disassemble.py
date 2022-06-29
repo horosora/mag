@@ -5,7 +5,7 @@ from mag import architecture
 from mag import register
 from mag import terminal
 
-class Disassemble(gdb.Command):
+class Command(gdb.Command):
     def __init__(self):
         super().__init__('mag disassemble', gdb.COMMAND_NONE, gdb.COMPLETE_NONE, False)
 

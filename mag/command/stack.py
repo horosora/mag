@@ -6,7 +6,7 @@ from mag import register
 from mag import memory
 from mag import terminal
 
-class Stack(gdb.Command):
+class Command(gdb.Command):
     def __init__(self):
         super().__init__('mag stack', gdb.COMMAND_NONE, gdb.COMPLETE_NONE, False)
 
